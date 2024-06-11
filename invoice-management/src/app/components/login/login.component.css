@@ -1,0 +1,5 @@
+.g-recaptcha {
+    width: 100% !important;
+    max-width: 304px; /* Default width for reCAPTCHA */
+    height: auto !important;
+  }

@@ -1,0 +1,9 @@
+<h1>Welcome, {{ username }}!</h1>
+<nav>
+  <ul>
+    <li *ngIf="hasRole('ROLE_ADMIN')"><a routerLink="/admin">Administration</a></li>
+    <li *ngIf="hasRole('ROLE_ACCOUNTANT') || hasRole('ROLE_USER')"><a routerLink="/invoices">Invoices</a></li>
+    <li *ngIf="hasRole('ROLE_ACCOUNTANT')"><a routerLink="/create-invoice">Create invoice</a></li>
+    <li><button class="btn btn-primary" (click)="logout()">Logout</button></li>
+  </ul>
+</nav>
